@@ -1,0 +1,10 @@
+{
+  "description": "This platform empowers university students in a research group to access workshops on Python in finance, web development, and company analysis, integrating tools like Google Calendar and Drive for enhanced collaboration.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
