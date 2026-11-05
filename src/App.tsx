@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react"
+import AcercaProyecto from "./AcercaProyecto";
 
-type Page = "inicio" | "precios" | "mapa" | "ofertas" | "acerca"
+type Page = "inicio" | "precios" | "mapa" | "ofertas" | "acerca" | "presentacion"
 type IconName = "home" | "chart" | "map" | "tag" | "info" | "leaf" | "calendar" | "chevron" | "arrowUp" | "arrowDown" | "search" | "phone" | "pin" | "weight" | "sprout" | "close" | "check"
 
 const icons: Record<IconName, React.ReactNode> = {
@@ -1035,7 +1036,7 @@ function App() {
   return (
     <div className="app-shell">
       <aside className="sidebar">
-        <button className="brand" onClick={() => navigate("inicio")}>
+        <button className="brand" onClick={() => navigate("presentacion")}>
           <span>
             <Icon name="leaf" size={23} />
           </span>
@@ -1072,7 +1073,7 @@ function App() {
       </aside>
       <main className={`main-content page-${page}`} aria-label={currentLabel}>
         <div className="mobile-topbar">
-          <button className="brand" onClick={() => navigate("inicio")}>
+          <button className="brand" onClick={() => navigate("presentacion")}>
             <span>
               <Icon name="leaf" size={20} />
             </span>
@@ -1089,7 +1090,10 @@ function App() {
           {page === "precios" && <PricesPage />}
           {page === "mapa" && <MapPage />}
           {page === "ofertas" && <OffersPage />}
-          {page === "acerca" && <AboutPage />}
+{page === "acerca" && <AboutPage />}
+{page === "presentacion" && (
+  <AcercaProyecto onVolver={() => navigate("inicio")} />
+)}
         </div>
       </main>
       <nav className="mobile-nav">

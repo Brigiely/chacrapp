@@ -1,0 +1,161 @@
+.ap-page {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.ap-back {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin-bottom: 18px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2e7d32;
+  cursor: pointer;
+}
+.ap-back:hover {
+  text-decoration: underline;
+}
+.ap-back:focus-visible {
+  outline: 2px solid #2e7d32;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.ap-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  min-height: 340px;
+  border-radius: 28px;
+  background: #14301b;
+}
+.ap-hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ap-hero-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgba(20, 48, 27, 0.95) 0%,
+    rgba(20, 48, 27, 0.7) 55%,
+    rgba(20, 48, 27, 0.1) 100%
+  );
+}
+.ap-hero-body {
+  max-width: 540px;
+  padding: 36px 40px;
+}
+.ap-kicker {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #a5d6a7;
+}
+.ap-hero h1 {
+  margin: 12px 0 0;
+  font-size: 48px;
+  line-height: 1.05;
+  color: #fff;
+}
+.ap-hero .ap-lead {
+  margin: 14px 0 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #e3efe0;
+}
+
+.ap-card {
+  margin-top: 22px;
+  overflow: hidden;
+  border: 1px solid #e4e2d8;
+  border-radius: 20px;
+  background: #fff;
+}
+.ap-card h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #1c2b21;
+}
+.ap-card p {
+  margin: 12px 0 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #3d4a41;
+}
+
+.ap-problem {
+  display: block;
+}
+.ap-problem-text {
+  padding: 28px 32px;
+}
+.ap-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: #000;
+  object-fit: contain;
+}
+
+.ap-question {
+  margin-top: 20px;
+  padding: 28px 32px;
+  border-radius: 20px;
+  background: #2e7d32;
+  color: #fff;
+}
+.ap-question h2 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #c8e6c9;
+}
+.ap-question p {
+  margin: 8px 0 0;
+  font-size: 21px;
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+.ap-goal {
+  padding: 28px 32px;
+}
+
+@media (max-width: 760px) {
+  .ap-hero {
+    min-height: 300px;
+  }
+  .ap-hero-body {
+    padding: 26px 22px;
+  }
+  .ap-hero h1 {
+    font-size: 36px;
+  }
+  .ap-problem-text,
+  .ap-goal,
+  .ap-question {
+    padding: 22px;
+  }
+  .ap-question p {
+    font-size: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ap-hero-video {
+    display: none;
+  }
+}
