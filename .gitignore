@@ -21,3 +21,6 @@ logs/
 /.opencode-skills/
 
 backend/etl/config_local.json
+# Clave del panel y datos crudos (no subir a GitHub)
+config_local.json
+backend/data/raw/
