@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react"
 import AcercaProyecto from "./AcercaProyecto";
+import MapaChacra from "./MapaChacra";
 
 type Page = "inicio" | "precios" | "mapa" | "ofertas" | "acerca" | "presentacion"
 type IconName = "home" | "chart" | "map" | "tag" | "info" | "leaf" | "calendar" | "chevron" | "arrowUp" | "arrowDown" | "search" | "phone" | "pin" | "weight" | "sprout" | "close" | "check"
@@ -749,7 +750,7 @@ function MapPage() {
           </div>
         </Panel>
         <Panel className="map-panel">
-          <PeruMap />
+          <MapaChacra />:
         </Panel>
       </div>
     </>
